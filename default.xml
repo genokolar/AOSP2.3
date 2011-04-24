@@ -6,7 +6,18 @@
   <default revision="gingerbread"
            remote="korg" />
 
-  <project path="build" name="platform/build">
+  <remote  name="github"
+           fetch="git://github.com/"
+           review="review.cyanogenmod.com" />
+
+  <remote  name="themes"
+           fetch="git://github.com/tmobile" />
+
+  <remote  name="geno"
+           fetch="git://github.com/genokolar" />
+
+
+  <project path="build" name="CyanogenMod/android_build" remote="github">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="bionic" name="platform/bionic" />
@@ -22,6 +33,8 @@
   <project path="device/htc/passion-common" name="device/htc/passion-common" />
   <project path="device/sample" name="device/sample" />
   <project path="device/samsung/crespo" name="device/samsung/crespo" />
+  <project path="device/zte/blade" name="android_device_zte_blade" remote="genokolar" />
+  <project path="device/zte/raise" name="android_device_zte_raise" remote="genokolar" />
   <project path="external/apache-http" name="platform/external/apache-http" />
   <project path="external/astl" name="platform/external/astl" />
   <project path="external/bison" name="platform/external/bison" />
@@ -173,5 +186,17 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
   <project path="system/wlan/ti" name="platform/system/wlan/ti" />
+
+  <project path="vendor/cyanogen" name="android_vendor_cyanogen" remote="genokolar" />
+
+  <project path="vendor/zte" name="vendor_zte" remote="genokolar" />
+
+<project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="github" revision="refs/heads/master" />
+  <project path="vendor/tmobile/libs/com.tmobile.themes" name="themes-platform-vendor-tmobile-libs-com.tmobile.themes" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/providers/ThemeManager" name="themes-platform-vendor-tmobile-providers-ThemeManager" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/themes/Androidian" name="themes-platform-vendor-tmobile-themes-Androidian" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/themes/Cyanbread" name="themes-platform-vendor-tmobile-themes-Cyanbread" remote="themes" revision="refs/heads/master" />
+  <project path="vendor/tmobile/products/themes" name="themes-platform-vendor-tmobile-products-themes" remote="themes" revision="refs/heads/master" />
+
 
 </manifest>
