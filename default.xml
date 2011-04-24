@@ -13,7 +13,7 @@
   <remote  name="themes"
            fetch="git://github.com/tmobile" />
 
-  <remote  name="geno"
+  <remote  name="genokolar"
            fetch="git://github.com/genokolar" />
 
 
@@ -198,5 +198,5 @@
   <project path="vendor/tmobile/themes/Cyanbread" name="themes-platform-vendor-tmobile-themes-Cyanbread" remote="themes" revision="refs/heads/master" />
   <project path="vendor/tmobile/products/themes" name="themes-platform-vendor-tmobile-products-themes" remote="themes" revision="refs/heads/master" />
 
-
+<project path="android" name="AOSP2.3" remote="genokolar" />
 </manifest>
